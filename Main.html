@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <button onclick="big()">Add</button>
+      <div style="text-align: center">
+        <canvas id="Canvas"></canvas>
+      </div>
+      <button onclick="small()">Sub</button>
+    </div>
+  </body>
+
+  <script>
+    let R = 100;
+    var c = document.getElementById("Canvas");
+    var ctx = c.getContext("2d");
+    ctx.rect(20, 20, 150, 100);
+    ctx.stroke();
+
+    function big() {
+      R = R + 100;
+      c.style.height = R + "px";
+    }
+    function small() {
+      R = R - 100;
+      c.style.height = R + "px";
+    }
+  </script>
+</html>
